@@ -1184,6 +1184,21 @@ h1 {
   transform: translateY(-1px);
 }
 
+.btn--flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn--flag img {
+  width: 18px;
+  height: 12px;
+  border-radius: 3px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
 .doc-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
