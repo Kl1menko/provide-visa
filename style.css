@@ -408,15 +408,15 @@ h1 {
 .stat-card__label {
   font-weight: 700;
   margin-bottom: 4px;
-  font-size: 17px;
+  font-size: 22px;
   color: #0f172a;
 }
 
 .stat-card__meta {
   margin: 0;
-  font-weight: 400;
+  font-weight: 200;
   color: #6b7285;
-  font-size: 12.5px;
+  font-size: 8px;
   line-height: 1.45;
 }
 
