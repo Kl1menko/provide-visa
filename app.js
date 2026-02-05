@@ -2,6 +2,8 @@
   const nav = document.querySelector(".nav");
   const navToggle = document.querySelector(".nav-toggle");
   const navShell = document.querySelector(".nav-shell");
+  const b2bSection = document.getElementById("services");
+  const b2bModal = document.getElementById("b2bModal");
 
   if (nav && navToggle) {
     const setNavState = (open) => {
@@ -211,4 +213,30 @@
 
   renderTabs();
   setActive(defaultCountryIndex, false);
+
+  // B2B modal on scroll into view
+  if (b2bSection && b2bModal) {
+    const closeModal = () => b2bModal.classList.remove("modal--open");
+    const backdrop = b2bModal.querySelector(".modal__backdrop");
+    const closeBtn = b2bModal.querySelector(".modal__close");
+    [backdrop, closeBtn].forEach((el) => el && el.addEventListener("click", closeModal));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    let shown = false;
+    const modalObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!shown && entry.isIntersecting) {
+            b2bModal.classList.add("modal--open");
+            shown = true;
+            modalObserver.disconnect();
+          }
+        });
+      },
+      { threshold: 0.35 },
+    );
+    modalObserver.observe(b2bSection);
+  }
 })();

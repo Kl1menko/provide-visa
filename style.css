@@ -1274,7 +1274,7 @@ h1 {
 }
 
 .footer__brand img {
-  height: 42px;
+  height: 65px;
   margin-bottom: 10px;
 }
 
@@ -1316,17 +1316,115 @@ h1 {
 }
 
 .social {
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 1.5px solid #0f172a;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  color: #0f172a;
-  font-size: 13px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
 }
+
+.social img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal--open {
+  display: flex;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.38);
+  backdrop-filter: blur(6px);
+}
+
+.modal__dialog {
+  position: relative;
+  background: radial-gradient(140% 160% at 15% 15%, #f5f8ff 0%, #ffffff 60%, #f7f9ff 100%);
+  border-radius: 18px;
+  padding: 24px 22px 20px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.24);
+  border: 1px dashed #d3dcf3;
+  overflow: hidden;
+  max-width: 440px;
+  width: calc(100% - 32px);
+  z-index: 1;
+}
+
+.modal__dialog::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(31, 78, 214, 0.1);
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.modal__dialog h4 {
+  margin: 6px 0 10px;
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.modal__dialog p {
+  margin: 0 0 14px;
+  color: #374151;
+}
+
+.modal__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.modal__actions .btn,
+.modal__actions .btn--ghost {
+  flex: 1;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  padding: 4px;
+  cursor: pointer;
+  color: #0f172a;
+}
+
+.modal__mail-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #eaf1ff, #d6e3ff);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 12px;
+  box-shadow: 0 10px 24px rgba(47, 108, 246, 0.18);
+}
+
 
 .footer__bottom {
   padding-top: 14px;
