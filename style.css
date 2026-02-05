@@ -511,14 +511,16 @@ h1 {
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  border-radius: 10px;
-  background: linear-gradient(120deg, #e7edff 0%, #d2ddff 100%);
-  color: #1f3b8a;
-  border: 1px solid #c6d4ff;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
-  font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.05em;
+  border-radius: 12px;
+  background: linear-gradient(120deg, #2f6cf6 0%, #1f4ed6 100%);
+  color: #fff;
+  border: 1px solid #1f4ed6;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 8px 16px rgba(31, 78, 214, 0.28);
+  font-weight: 800;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -945,6 +947,12 @@ h1 {
   border-radius: 22px;
   padding: 16px;
   box-shadow: 0 18px 48px rgba(15, 23, 42, 0.12);
+}
+
+.countries__title {
+  margin: 0 auto 14px;
+  font-size: 26px;
+  text-align: center;
 }
 
 .country-tabs {
