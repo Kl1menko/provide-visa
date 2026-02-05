@@ -23,10 +23,15 @@
           <div class="logo">
             <img src="image/Provide logo.svg" alt="Provide Visa Consult" />
           </div>
-          <button class="nav-toggle" aria-label="Toggle menu">
+          <button
+            class="nav-toggle"
+            aria-label="Toggle menu"
+            aria-controls="primaryNav"
+            aria-expanded="false"
+          >
             <span></span><span></span><span></span>
           </button>
-          <nav class="nav">
+          <nav class="nav" id="primaryNav">
             <a href="#about">About Us</a>
             <a href="#services">B2B Partnership</a>
             <a href="#team">Team</a>
@@ -63,10 +68,10 @@
       </div>
 
       <div class="hero__gallery">
-        <img src="image/Frame 61.png" alt="Client portrait 1" />
-        <img src="image/Frame 62.png" alt="Client portrait 2" />
-        <img src="image/Frame 64.png" alt="Client portrait 3" />
-        <img src="image/Frame 63.png" alt="Client portrait 4" />
+        <img src="image/Frame 61.png" alt="Client portrait 1" loading="lazy" />
+        <img src="image/Frame 62.png" alt="Client portrait 2" loading="lazy" />
+        <img src="image/Frame 64.png" alt="Client portrait 3" loading="lazy" />
+        <img src="image/Frame 63.png" alt="Client portrait 4" loading="lazy" />
       </div>
     </header>
 
@@ -74,7 +79,11 @@
       <section id="about" class="about section">
         <div class="container about__grid">
           <div class="about__image">
-            <img src="image/Frame 65.png" alt="Provide Visa Consult team" />
+            <img
+              src="image/Frame 65.png"
+              alt="Provide Visa Consult team"
+              loading="lazy"
+            />
           </div>
           <div class="about__content">
             <h2>At Provide Visa Consult</h2>
@@ -121,7 +130,7 @@
           </p>
         </div>
         <div class="map">
-          <img src="image/map-base 1 (1).svg" alt="Partner map" />
+          <img src="image/map-base 1 (1).svg" alt="Partner map" loading="lazy" />
         </div>
       </section>
 
@@ -204,10 +213,19 @@
 
       <section class="countries section" id="countries">
         <div class="container country-card">
-          <div class="country-tabs" id="countryTabs"></div>
+          <div class="country-tabs" id="countryTabs">
+            <button class="country-tab active" aria-current="true">
+              <img
+                class="country-flag"
+                src="https://flagcdn.com/w40/cz.png"
+                alt="Czech Republic flag"
+              />
+              <span>Czech Republic</span>
+            </button>
+          </div>
           <div class="country-panel" id="countryPanel">
             <div class="country-panel__header">
-              <h3 id="countryName"></h3>
+              <h3 id="countryName">Czech Republic</h3>
             </div>
             <div class="country-panel__body">
               <div class="country-panel__info">
@@ -220,7 +238,10 @@
                   />
                   <div>
                     <h4>Work Sectors</h4>
-                    <p id="countrySectors"></p>
+                    <p id="countrySectors">
+                      Logistics centers and warehouses, plants and factories,
+                      agricultural and seasonal programs.
+                    </p>
                   </div>
                 </div>
                 <div class="info-row">
@@ -232,7 +253,7 @@
                   />
                   <div>
                     <h4>Salary Level</h4>
-                    <p id="countrySalary"></p>
+                    <p id="countrySalary">€1,100–1,500 per month.</p>
                   </div>
                 </div>
                 <div class="info-row">
@@ -244,19 +265,35 @@
                   />
                   <div>
                     <h4>Conditions</h4>
-                    <p id="countryConditions"></p>
+                    <p id="countryConditions">
+                      Accommodation and transportation are provided.
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="country-panel__image">
                 <img
                   id="countryImage"
-                  src="image/Frame 65.png"
-                  alt="Country preview"
+                  src="image/chech-rep.jpg"
+                  alt="Czech Republic"
+                  loading="lazy"
                 />
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="docs-cta section" id="documents">
+        <div class="container docs-cta__card">
+          <div class="docs-cta__content">
+            <p class="eyebrow eyebrow--section">Documents</p>
+            <h3>See how ready visa files look</h3>
+            <p>
+              View sanitized samples of visa packs, invitations, and translations before you start.
+            </p>
+          </div>
+          <a class="btn btn--ghost" href="documents.html">View samples</a>
         </div>
       </section>
 
@@ -272,10 +309,32 @@
             </p>
           </div>
           <div class="experts__gallery experts__gallery--grid">
-            <img src="image/Frame 61.png" alt="Team member 1" />
-            <img src="image/Frame 62.png" alt="Team member 2" />
-            <img src="image/Frame 63.png" alt="Team member 3" />
-            <img src="image/Frame 64.png" alt="Team member 4" />
+            <img src="image/Frame 61.png" alt="Team member 1" loading="lazy" />
+            <img src="image/Frame 62.png" alt="Team member 2" loading="lazy" />
+            <img src="image/Frame 63.png" alt="Team member 3" loading="lazy" />
+            <img src="image/Frame 64.png" alt="Team member 4" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials section" id="testimonials">
+        <div class="container">
+          <div class="section__heading section__heading--center">
+            <p class="eyebrow eyebrow--section">Feedback</p>
+            <h3>What our partners say</h3>
+            <p>
+              Real impressions from agencies and clients who went the full journey with us.
+            </p>
+          </div>
+          <div class="testimonials__gallery">
+            <img src="image/1.JPG" alt="Client testimonial 1" loading="lazy" class="testimonials__photo" />
+            <img src="image/2.JPG" alt="Client testimonial 2" loading="lazy" class="testimonials__photo" />
+            <img src="image/3.JPG" alt="Client testimonial 3" loading="lazy" class="testimonials__photo" />
+          </div>
+          <div class="testimonials__cta">
+            <a class="btn btn--ghost" href="https://wa.me/420776364511" target="_blank" rel="noopener">
+              Get in touch
+            </a>
           </div>
         </div>
       </section>

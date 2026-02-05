@@ -1,12 +1,33 @@
 (function () {
   const nav = document.querySelector(".nav");
   const navToggle = document.querySelector(".nav-toggle");
+  const navShell = document.querySelector(".nav-shell");
 
   if (nav && navToggle) {
+    const setNavState = (open) => {
+      nav.classList.toggle("nav--open", open);
+      navToggle.classList.toggle("nav-toggle--open", open);
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
     navToggle.addEventListener("click", () => {
-      nav.classList.toggle("nav--open");
-      navToggle.classList.toggle("nav-toggle--open");
+      const next = !nav.classList.contains("nav--open");
+      setNavState(next);
     });
+
+    nav
+      .querySelectorAll("a")
+      .forEach((link) =>
+        link.addEventListener("click", () => setNavState(false)),
+      );
+
+    document.addEventListener("click", (e) => {
+      if (!nav.classList.contains("nav--open")) return;
+      if (navShell && navShell.contains(e.target)) return;
+      setNavState(false);
+    });
+
+    setNavState(false);
   }
 
   // Animated counters
@@ -47,7 +68,6 @@
     requestAnimationFrame(step);
   }
 
-  // Country tabs data
   const countryData = [
     {
       name: "Czech Republic",
@@ -146,14 +166,15 @@
   const conditionsEl = document.getElementById("countryConditions");
   const imageEl = document.getElementById("countryImage");
 
-  const defaultCountryIndex = 0; // показуємо першу країну одразу
+  const defaultCountryIndex = 0;
 
   function renderTabs() {
     if (!tabsContainer) return;
     tabsContainer.innerHTML = "";
     countryData.forEach((c, idx) => {
       const btn = document.createElement("button");
-      btn.className = "country-tab" + (idx === defaultCountryIndex ? " active" : "");
+      btn.className =
+        "country-tab" + (idx === defaultCountryIndex ? " active" : "");
       btn.dataset.index = idx;
       btn.innerHTML = `
           <img class="country-flag" src="${c.flag}" alt="${c.name} flag" />
@@ -169,7 +190,11 @@
     tabs.forEach((tab, idx) => {
       tab.classList.toggle("active", idx === i);
       if (scrollIntoView && idx === i) {
-        tab.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        tab.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
       }
     });
     const c = countryData[i];
