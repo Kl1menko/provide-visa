@@ -76,7 +76,7 @@
         "Logistics centers and warehouses, plants and factories, agricultural and seasonal programs.",
       salary: "€1,100–1,500 per month.",
       conditions: "Accommodation and transportation are provided.",
-      image: "image/chech-rep.jpg",
+      image: "images/chech-rep.jpg",
     },
     {
       name: "Poland",
@@ -85,7 +85,7 @@
         "Manufacturing enterprises, warehouses and logistics, seasonal programs, meat processing plants.",
       salary: "€1,000–1,400 per month.",
       conditions: "Accommodation and transportation are provided.",
-      image: "image/poland.jpg",
+      image: "images/poland.jpg",
     },
     {
       name: "Slovakia",
@@ -94,7 +94,7 @@
         "Industrial plants, manufacturing enterprises, warehouse complexes.",
       salary: "€1,000–1,300 per month.",
       conditions: "Accommodation and transportation are provided.",
-      image: "image/slovakia.jpg",
+      image: "images/slovakia.jpg",
     },
     {
       name: "Germany",
@@ -103,7 +103,7 @@
         "Manufacturing and automotive plants, construction projects, warehouse logistics, cleaning.",
       salary: "€1,500–1,900 per month (for third-country nationals).",
       conditions: "Accommodation and transportation are provided.",
-      image: "image/germany.jpg",
+      image: "images/germany.jpg",
     },
     {
       name: "Hungary",
@@ -111,7 +111,7 @@
       sectors: "Plants and factories, warehouse logistics, seasonal programs.",
       salary: "€900–1,200 per month.",
       conditions: "Accommodation and transportation are provided.",
-      image: "image/hungary.jpg",
+      image: "images/hungary.jpg",
     },
     {
       name: "Ukraine",
@@ -121,7 +121,7 @@
       salary: "€800–1,200 per month (depending on the project).",
       conditions:
         "Accommodation and transportation are provided within program frameworks.",
-      image: "image/ukraine.jpg",
+      image: "images/ukraine.jpg",
     },
     {
       name: "Serbia",
@@ -130,7 +130,7 @@
         "Agriculture, construction work, basic manual and service positions.",
       salary: "€600–900 per month.",
       conditions: "Accommodation and transportation are provided.",
-      image: "image/serbia.jpg",
+      image: "images/serbia.jpg",
     },
     {
       name: "Montenegro",
@@ -138,7 +138,7 @@
       sectors: "Seasonal programs in tourism and service industries.",
       salary: "€800–1,100 per month.",
       conditions: "Accommodation and transportation are provided.",
-      image: "image/montenegro.jpg",
+      image: "images/montenegro.jpg",
     },
     {
       name: "Turkey",
@@ -146,7 +146,7 @@
       sectors: "Seasonal programs, manufacturing enterprises, hotel sector.",
       salary: "€700–1,000 per month.",
       conditions: "Accommodation and transportation are provided.",
-      image: "image/turkey.jpg",
+      image: "images/turkey.jpg",
     },
     {
       name: "Portugal",
@@ -155,7 +155,7 @@
         "Agriculture, manufacturing enterprises, service and seasonal programs.",
       salary: "€1,000–1,300 per month.",
       conditions: "Accommodation and transportation are provided.",
-      image: "image/portugal.jpg",
+      image: "images/portugal.jpg",
     },
   ];
 
