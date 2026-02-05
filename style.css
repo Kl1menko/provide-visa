@@ -955,7 +955,7 @@ h1 {
 
 .country-card {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 290px 1fr;
   gap: 18px;
   background: #fff;
   border-radius: 22px;
@@ -1034,6 +1034,11 @@ h1 {
   grid-template-columns: 1fr 0.9fr;
   gap: 16px;
   align-items: start;
+}
+
+.country-panel__image {
+  align-self: start;
+  margin-top: -8px;
 }
 
 .country-panel__image img {
@@ -1538,6 +1543,9 @@ h1 {
 
   .country-panel__body {
     grid-template-columns: 1fr;
+  }
+  .country-panel__image {
+    margin-top: 0;
   }
   .country-panel__image img {
     height: 220px;
