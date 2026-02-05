@@ -1114,6 +1114,21 @@ h1 {
     order: -1;
   }
 
+  /* Expertise carousel: disable masking and set full width for wrapping on tablets/mobiles */
+  .expertise__cards {
+    mask-image: none;
+    overflow: visible;
+  }
+  .expertise__track {
+    flex-wrap: wrap;
+    animation: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .expertise__track .expertise-card:nth-child(n+7) {
+    display: none;
+  }
+
   .nav-shell {
     padding: 6px 10px;
     flex-wrap: wrap;
@@ -1245,6 +1260,10 @@ h1 {
     flex-wrap: wrap;
     animation: none;
     gap: 12px;
+    width: 100%;
+  }
+  .expertise__track .expertise-card:nth-child(n+7) {
+    display: none;
   }
 
   .hero__gallery {
@@ -1291,4 +1310,3 @@ h1 {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-
