@@ -33,8 +33,9 @@
             <a href="#values">Values</a>
             <a href="#expertise">Areas</a>
             <a href="#countries">Countries</a>
+            <a class="btn btn--ghost nav__cta" href="https://wa.me/420776364511" target="_blank" rel="noopener">Get in touch</a>
           </nav>
-          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          <a class="btn btn--ghost" href="https://wa.me/420776364511" target="_blank" rel="noopener">Get in touch</a>
         </div>
       </div>
 
@@ -49,14 +50,14 @@
           visas in +10 countries
         </p>
         <div class="hero__cta">
-          <a class="btn" href="#contact">
+          <a class="btn" href="https://wa.me/420776364511" target="_blank" rel="noopener">
             <img
               class="btn__icon"
               src="image/icons/comment.svg"
               alt=""
               aria-hidden="true"
             />
-            Get in touch
+            <span class="btn__label">Get in touch</span>
           </a>
         </div>
       </div>
@@ -195,6 +196,64 @@
                   Predictable project growth powered by transparent processes
                   and SLAs.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="countries section" id="countries">
+        <div class="container country-card">
+          <div class="country-tabs" id="countryTabs"></div>
+          <div class="country-panel" id="countryPanel">
+            <div class="country-panel__header">
+              <h3 id="countryName"></h3>
+            </div>
+            <div class="country-panel__body">
+              <div class="country-panel__info">
+                <div class="info-row">
+                  <img
+                    class="info-icon"
+                    src="image/icons/work-sectors.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div>
+                    <h4>Work Sectors</h4>
+                    <p id="countrySectors"></p>
+                  </div>
+                </div>
+                <div class="info-row">
+                  <img
+                    class="info-icon"
+                    src="image/icons/salary-level.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div>
+                    <h4>Salary Level</h4>
+                    <p id="countrySalary"></p>
+                  </div>
+                </div>
+                <div class="info-row">
+                  <img
+                    class="info-icon"
+                    src="image/icons/conditions.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div>
+                    <h4>Conditions</h4>
+                    <p id="countryConditions"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="country-panel__image">
+                <img
+                  id="countryImage"
+                  src="image/Frame 65.png"
+                  alt="Country preview"
+                />
               </div>
             </div>
           </div>
@@ -347,63 +406,6 @@
         </div>
       </section>
 
-      <section class="countries section" id="countries">
-        <div class="container country-card">
-          <div class="country-tabs" id="countryTabs"></div>
-          <div class="country-panel" id="countryPanel">
-            <div class="country-panel__header">
-              <h3 id="countryName"></h3>
-            </div>
-            <div class="country-panel__body">
-              <div class="country-panel__info">
-                <div class="info-row">
-                  <img
-                    class="info-icon"
-                    src="image/icons/work-sectors.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <div>
-                    <h4>Work Sectors</h4>
-                    <p id="countrySectors"></p>
-                  </div>
-                </div>
-                <div class="info-row">
-                  <img
-                    class="info-icon"
-                    src="image/icons/salary-level.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <div>
-                    <h4>Salary Level</h4>
-                    <p id="countrySalary"></p>
-                  </div>
-                </div>
-                <div class="info-row">
-                  <img
-                    class="info-icon"
-                    src="image/icons/conditions.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <div>
-                    <h4>Conditions</h4>
-                    <p id="countryConditions"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="country-panel__image">
-                <img
-                  id="countryImage"
-                  src="image/Frame 65.png"
-                  alt="Country preview"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer id="contact" class="footer">
@@ -439,10 +441,10 @@
               >
             </p>
             <div class="footer__socials">
-              <span class="social">in</span>
-              <span class="social">ig</span>
-              <span class="social">f</span>
-              <span class="social">tt</span>
+              <a class="social" href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+              <a class="social" href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+              <a class="social" href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+              <a class="social" href="https://www.tiktok.com" aria-label="TikTok" target="_blank" rel="noopener">tt</a>
             </div>
           </div>
         </div>
@@ -596,9 +598,9 @@
       const sectorsEl = document.getElementById("countrySectors");
       const salaryEl = document.getElementById("countrySalary");
       const conditionsEl = document.getElementById("countryConditions");
-      const imageEl = document.getElementById("countryImage");
+    const imageEl = document.getElementById("countryImage");
 
-      const defaultCountryIndex = 0; // показуємо першу країну одразу
+    const defaultCountryIndex = 0; // показуємо першу країну одразу
 
       function renderTabs() {
         tabsContainer.innerHTML = "";
@@ -637,8 +639,9 @@
         imageEl.alt = c.name;
       }
 
-      renderTabs();
-      setActive(defaultCountryIndex, true);
-    </script>
-  </body>
+    renderTabs();
+    setActive(defaultCountryIndex, false);
+
+  </script>
+ </body>
 </html>
