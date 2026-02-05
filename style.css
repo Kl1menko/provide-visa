@@ -781,7 +781,6 @@ h1 {
   line-height: 1.7;
 }
 
-
 .experts__gallery {
   display: grid;
   gap: 14px;
@@ -1267,8 +1266,8 @@ h1 {
 
 .footer__top {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px 18px;
   align-items: start;
   margin-bottom: 18px;
 }
@@ -1276,6 +1275,7 @@ h1 {
 .footer__brand img {
   height: 65px;
   margin-bottom: 10px;
+  display: block;
 }
 
 .footer__brand p {
@@ -1283,6 +1283,11 @@ h1 {
   color: #374151;
   line-height: 1.5;
   font-weight: 700;
+  text-align: left;
+}
+
+.footer__brand {
+  text-align: left;
 }
 
 .footer__col h4,
@@ -1355,15 +1360,21 @@ h1 {
 
 .modal__dialog {
   position: relative;
-  background: radial-gradient(140% 160% at 15% 15%, #f5f8ff 0%, #ffffff 60%, #f7f9ff 100%);
+  background: radial-gradient(
+    140% 160% at 15% 15%,
+    #f5f8ff 0%,
+    #ffffff 60%,
+    #f7f9ff 100%
+  );
   border-radius: 18px;
-  padding: 24px 22px 20px;
+  padding: 26px 24px 22px;
   box-shadow: 0 20px 60px rgba(15, 23, 42, 0.24);
   border: 1px dashed #d3dcf3;
   overflow: hidden;
-  max-width: 440px;
-  width: calc(100% - 32px);
+  max-width: 540px;
+  width: calc(100% - 48px);
   z-index: 1;
+  text-align: center;
 }
 
 .modal__dialog::before {
@@ -1412,19 +1423,32 @@ h1 {
   color: #0f172a;
 }
 
+.modal__title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
 .modal__mail-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: linear-gradient(145deg, #eaf1ff, #d6e3ff);
+  width: 32px;
+  height: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
-  margin-bottom: 12px;
-  box-shadow: 0 10px 24px rgba(47, 108, 246, 0.18);
+  font-size: 22px;
+  margin-right: 0;
+  margin-bottom: 0;
+  box-shadow: none;
 }
 
+.modal__logo {
+  height: 186px;
+  width: auto;
+  display: block;
+  margin: 0 auto 16px;
+}
 
 .footer__bottom {
   padding-top: 14px;
@@ -1469,6 +1493,11 @@ h1 {
     grid-template-columns: 1fr;
     justify-items: start;
     gap: 12px;
+  }
+
+  .footer__top {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px 14px;
   }
 }
 
