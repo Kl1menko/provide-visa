@@ -402,8 +402,8 @@ h1 {
 
 .stat-card__meta {
   margin: 0;
-  color: #7a8190;
-  font-size: 14px;
+  color: #6d6d6d;
+  font-size: 10px;
   line-height: 1.5;
 }
 
@@ -796,7 +796,13 @@ h1 {
   overflow: hidden;
   margin: 0 auto;
   position: relative;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
 }
 
 .expertise__track {
@@ -828,7 +834,7 @@ h1 {
 .expertise-card p {
   position: relative;
   margin: 0;
-  color: #3f4b63;
+  color: #6d6d6d;
   line-height: 1.55;
   font-size: 15.5px;
 }
@@ -1125,7 +1131,7 @@ h1 {
     justify-content: center;
     width: 100%;
   }
-  .expertise__track .expertise-card:nth-child(n+7) {
+  .expertise__track .expertise-card:nth-child(n + 7) {
     display: none;
   }
 
@@ -1262,7 +1268,7 @@ h1 {
     gap: 12px;
     width: 100%;
   }
-  .expertise__track .expertise-card:nth-child(n+7) {
+  .expertise__track .expertise-card:nth-child(n + 7) {
     display: none;
   }
 
@@ -1307,6 +1313,10 @@ h1 {
 }
 
 @keyframes expertiseMarquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
