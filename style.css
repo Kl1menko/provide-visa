@@ -402,9 +402,9 @@ h1 {
 
 .stat-card__meta {
   margin: 0;
+  font-weight: 300;
   color: #6d6d6d;
   font-size: 10px;
-  line-height: 1.5;
 }
 
 .statement {
@@ -809,7 +809,7 @@ h1 {
   display: flex;
   gap: 14px;
   width: max-content;
-  animation: expertiseMarquee 26s linear infinite;
+  animation: expertiseMarquee 34s linear infinite;
 }
 
 .expertise-card {
@@ -1027,6 +1027,11 @@ h1 {
   line-height: 1.5;
 }
 
+.tel-highlight {
+  font-weight: 700;
+  color: #0f172a;
+}
+
 .footer__socials {
   display: flex;
   gap: 10px;
@@ -1061,7 +1066,7 @@ h1 {
   }
 
   .expertise__track {
-    animation: expertiseMarquee 22s linear infinite;
+    animation: expertiseMarquee 28s linear infinite;
   }
 
   .experts__gallery--grid {
